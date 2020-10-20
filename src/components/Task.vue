@@ -1,6 +1,10 @@
 <template>
-  <a class="panel-block">
-    <a class="panel-icon">
+  <a class="panel-block" v-bind:class="checked_class">
+    <a
+      class="panel-icon has-text-success"
+      v-on:click="$emit('check')"
+      v-bind:class="checked_class"
+    >
       <i class="fas fa-check" aria-hidden="true"></i>
     </a>
     {{ description }}
@@ -13,7 +17,14 @@ export default {
   props: {
     id: Number,
     description: String,
-    is_complete: Boolean,
+    is_complete: Number,
+  },
+  computed: {
+    checked_class() {
+      return {
+        'has-text-grey-light': this.is_complete,
+      };
+    },
   },
 };
 </script>

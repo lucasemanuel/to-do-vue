@@ -35,9 +35,12 @@
     <article class="panel is-primary">
       <p class="panel-heading">Tarefas</p>
       <Task
-        v-for="item in tasks"
+        v-for="(item, index) in tasks"
         v-bind:key="item.id"
+        v-bind:index="index"
         v-bind:description="item.description"
+        v-bind:is_complete="item.is_checked"
+        v-on:check="check(index)"
       ></Task>
     </article>
   </section>
@@ -54,18 +57,21 @@ export default {
   data() {
     return {
       task: '',
-      tasks: [
-      ],
+      tasks: [],
       last_id: 0,
     };
   },
   methods: {
     add() {
       this.tasks.push({
-        id: 1,
+        id: this.last_id += 1,
         description: this.task,
+        is_checked: 0,
       });
       this.last_id += 1;
+    },
+    check(index) {
+      this.tasks[index].is_checked = 1;
     },
   },
 };
