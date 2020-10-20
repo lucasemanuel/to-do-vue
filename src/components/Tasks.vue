@@ -15,7 +15,7 @@
                       name="task"
                       id="task"
                       placeholder="ex: Tirar o lixo"
-                      v-model="task"
+                      v-model="task_description"
                     />
                   </div>
                   <div class="control">
@@ -41,6 +41,7 @@
         v-bind:description="item.description"
         v-bind:is_complete="item.is_checked"
         v-on:check="check(index)"
+        v-on:remove="remove(index)"
       ></Task>
     </article>
   </section>
@@ -56,22 +57,30 @@ export default {
   },
   data() {
     return {
-      task: '',
+      task_description: '',
       tasks: [],
       last_id: 0,
     };
   },
   methods: {
     add() {
-      this.tasks.push({
+      const task = {
         id: this.last_id += 1,
-        description: this.task,
+        description: this.task_description,
         is_checked: 0,
-      });
+      };
+      this.tasks.splice(0, 0, task);
       this.last_id += 1;
+      this.task_description = '';
     },
     check(index) {
-      this.tasks[index].is_checked = 1;
+      const task = this.tasks[index];
+      task.is_checked = 1;
+      this.remove(index);
+      this.tasks.push(task);
+    },
+    remove(index) {
+      this.tasks.splice(index, 1);
     },
   },
 };
