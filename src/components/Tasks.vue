@@ -6,7 +6,7 @@
           <div class="content">
             <form v-on:submit.prevent="add">
               <div class="field">
-                <label for="task" class="label">Adicione sua tarefa</label>
+                <label for="task" class="label">Adicione uma tarefa</label>
                 <div class="field has-addons">
                   <div class="control is-expanded">
                     <input
@@ -58,7 +58,13 @@ export default {
   data() {
     return {
       task_description: '',
-      tasks: [],
+      tasks: [
+        {
+          id: 0,
+          description: 'Dar like nesse repositório legal!',
+          is_checked: 0,
+        },
+      ],
       last_id: 0,
     };
   },
