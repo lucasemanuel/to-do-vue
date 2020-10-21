@@ -71,19 +71,25 @@ export default {
   methods: {
     add() {
       const task = {
-        id: this.last_id += 1,
+        id: (this.last_id += 1),
         description: this.task_description,
         is_checked: 0,
       };
+
       this.tasks.splice(0, 0, task);
       this.last_id += 1;
       this.task_description = '';
     },
     check(index) {
       const task = this.tasks[index];
-      task.is_checked = 1;
+
+      task.is_checked = !task.is_checked;
       this.remove(index);
-      this.tasks.push(task);
+      if (task.is_checked) {
+        this.tasks.push(task);
+      } else {
+        this.tasks.splice(0, 0, task);
+      }
     },
     remove(index) {
       this.tasks.splice(index, 1);
