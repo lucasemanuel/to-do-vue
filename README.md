@@ -1,24 +1,23 @@
-# todo
+<p align="center">
+  <a href="" rel="noopener">
+  <img width=200px height=200px src=".github/img/logo.svg" alt="Project logo"></a>
+  <h1 align="center" style="color: #00d1b2">To do Vue</h1>
+</p>
 
-## Project setup
-```
-yarn install
-```
+<div align="center">
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/lucasemanuel/to-do-vue" />
+  <img alt="" src="https://img.shields.io/github/repo-size/lucasemanuel/to-do-vue" />
+  <img alt="" src="https://badgen.net/github/status/lucasemanuel/to-do-vue/gh-pages" />
+</div>
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+<p align="center">
+  <h3 align="center">Liste suas tarefas para não se esquecer delas</h3>
+</p>
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## ⛏️ Built Using <a name = "built_using"></a>
 
-### Lints and fixes files
-```
-yarn lint
-```
+- [VueJs](https://vuejs.org/) - Web Framework
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## ✍️ Authors <a name = "authors"></a>
+
+- [@Lucas Emanuel](https://github.com/lucasemanuel)
