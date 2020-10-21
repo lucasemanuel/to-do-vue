@@ -7,13 +7,13 @@
     >
       <i class="fas fa-check" aria-hidden="true"></i>
     </span>
-    <span>
-      {{ description }}
-    </span>
     <span class="has-text-right is-pulled-right">
       <a class="has-text-danger ml-3" v-on:click="$emit('remove')">
         <i class="fas fa-times" aria-hidden="true"></i>
       </a>
+    </span>
+    <span>
+      {{ description }}
     </span>
   </a>
 </template>
