@@ -2,8 +2,10 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>To do Vue</strong> by
-        <a href="https://github.com/lucasemanuel">Lucas Emanuel</a> - {{ getYear() }}
+        <strong>To do Vue</strong>
+        (<a href="https://github.com/lucasemanuel/to-do-vue/">repo</a>) by
+        <a href="https://github.com/lucasemanuel">Lucas Emanuel</a> -
+        {{ getYear() }}
       </p>
     </div>
   </footer>

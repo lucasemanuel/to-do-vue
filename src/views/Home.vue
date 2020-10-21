@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header
-      title="Minha Tarefas"
-      sub_title="Não se esqueça das suas tarefas"
+      title="To do"
+      sub_title="Liste suas tarefas para não se esquecer delas"
     ></Header>
     <main class="container is-max-widescreen">
       <Tasks />
