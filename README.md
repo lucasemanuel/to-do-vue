@@ -10,8 +10,9 @@
   <img alt="" src="https://badgen.net/github/status/lucasemanuel/to-do-vue/gh-pages" />
 </div>
 
+<h3 align="center">Liste suas tarefas para não se esquecer delas</h3>
 <p align="center">
-  <h3 align="center">Liste suas tarefas para não se esquecer delas</h3>
+  Acesse aqui: <a href=https://lucasemanuel.github.io/to-do-vue/>To do vue</a>
 </p>
 
 ## ⛏️ Built Using <a name = "built_using"></a>
